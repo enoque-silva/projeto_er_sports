@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    background-color: #14151a;
+    color: white;
+    padding: 8px;    
+}
+
+header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 34px;
+}
+
+header ul{
+    display: flex;
+}
+
+.menu li{
+    list-style: none;    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+}
+
+header li+li{
+    margin-left: 1em;
+    
+}
+
+#sobreLoja{
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+}
+
+#sobreLoja img{    
+    margin-right: 2em;
+}
+
+section{
+    margin-bottom: 2em;
+}
+
+section h2{
+    margin-bottom: 1em;
+}
+
+#sobreLoja div+div{
+    margin-left: 1.5em;
+}
+
+#sobreLoja p+p{    
+    margin-top: 1em;
+}
+
+
+
+#produtos ul{
+    list-style: none;    
+    grid-template-columns:repeat(4, 24.75%);
+    display: grid;
+
+    column-gap: 1%;
+    row-gap: 5%;    
+}
+
+#produtos li{
+    display: grid;
+    align-content: space-between;
+}
+
+#produtos h3{
+    font-size: 1.2em;
+    margin: 16px 0;
+}
+
+#produtos img{
+    width: 100%;
+}  
+
+#produtos p{
+    margin: 4px 0;
+}
+
+#produtos strong {
+    margin: 17px 0;
+    display: block; 
+    font-size: 21px;
+}
+
+#produtos button{
+    width: 100%;
+    border: none; 
+    padding: 8px 17px; 
+    border-radius: 8px; 
+    font-size: 17px; 
+    background-color: #14151a; 
+    color: #fff; 
+    border: 1px solid #14151a; 
+    cursor: pointer; 
+}
+
+#produtos button:hover{
+    background-color: #313340;
+}
+
+@media screen and (max-width: 767px){
+
+    header div.container{    
+        flex-direction: column;
+    }
+
+    .container{
+        max-width: 90%;
+    }
+
+    #sobreLoja{
+        display: block;
+    }
+    
+    #sobreLoja img{
+        width: 100%;
+        margin-bottom: 5%;
+    } 
+
+     #produtos ul{
+        grid-template-columns: none;
+    }
+
+    #produtos li{
+        margin: 0;
+        height: 100%;
+    }
+
+    #sobreLoja div+div{
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        max-width: 90%;
+    }
+
+    #sobreLoja{
+        display: block;
+    }
+
+    #sobreLoja img{
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    #produtos ul{
+        grid-template-columns: repeat(2, 49.5%);
+    }
+
+    #sobreLoja div+div{
+        margin-left: 0;
+    }
+
+}
